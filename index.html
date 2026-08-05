@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LedgerLine | Personal Expense Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Background -->
+<div class="background"></div>
+
+<!-- Header -->
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h1>LedgerLine</h1>
+
+</div>
+
+<div class="header-right">
+
+<button id="themeBtn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</div>
+
+</header>
+
+<!-- Dashboard -->
+
+<section class="dashboard">
+
+<div class="card balance">
+
+<h3>Total Balance</h3>
+
+<h2 id="balance">₹0</h2>
+
+</div>
+
+<div class="card income">
+
+<h3>Income</h3>
+
+<h2 id="income">₹0</h2>
+
+</div>
+
+<div class="card expense">
+
+<h3>Expense</h3>
+
+<h2 id="expense">₹0</h2>
+
+</div>
+
+</section>
+
+<!-- Add Transaction -->
+
+<section class="add-box">
+
+<h2>Add Transaction</h2>
+
+<form id="transactionForm">
+
+<div class="grid">
+
+<input
+type="text"
+id="title"
+placeholder="Transaction Title"
+required>
+
+<input
+type="number"
+id="amount"
+placeholder="Amount"
+required>
+
+<select id="type">
+
+<option value="income">
+
+Income
+
+</option>
+
+<option value="expense">
+
+Expense
+
+</option>
+
+</select>
+
+<select id="category">
+
+<option>Food</option>
+
+<option>Shopping</option>
+
+<option>Travel</option>
+
+<option>Education</option>
+
+<option>Entertainment</option>
+
+<option>Medical</option>
+
+<option>Salary</option>
+
+<option>Investment</option>
+
+<option>Other</option>
+
+</select>
+
+<input
+type="date"
+id="date">
+
+</div>
+
+<button type="submit" class="addBtn">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Transaction
+
+</button>
+
+</form>
+
+</section>
+
+<!-- Search -->
+
+<section class="search-section">
+
+<input
+
+type="text"
+
+id="search"
+
+placeholder="Search Transaction...">
+
+</section>
+
+<!-- Transaction List -->
+
+<section class="transactions">
+
+<div class="top">
+
+<h2>
+
+Recent Transactions
+
+</h2>
+
+<button id="exportCSV">
+
+<i class="fa-solid fa-file-csv"></i>
+
+Export CSV
+
+</button>
+
+</div>
+
+<div id="transactionList">
+
+<!-- JS -->
+
+</div>
+
+</section>
+
+<!-- Chart -->
+
+<section class="chart-section">
+
+<h2>Monthly Expense Overview</h2>
+
+<canvas id="expenseChart"></canvas>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<p>
+
+© 2026 LedgerLine
+
+Designed with ❤️
+
+</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
